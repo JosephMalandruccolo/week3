@@ -1,0 +1,9 @@
+
+<div id="container">
+	<h1>Rock, Paper, Scissors</h1>
+	<h2>Let's play! Choose one:</h2>
+
+	<% @moves.each do |move| %>
+		<a href=<%= '"'.html_safe+"/rps/result?item="+"#{move.item}"+'"'.html_safe%>><img alt=<%= '"'.html_safe+"#{move.item}"+'"'.html_safe%> src=<%='"'.html_safe+"#{move.imageUrl}"+'"'.html_safe%>/></a>
+	<% end %>
+</div>
