@@ -1,0 +1,14 @@
+
+<div id="container">
+	<h1>Poker Cards</h1>
+	<br />
+	<%= link_to "Refresh this page to deal another hand", poker_path %>
+	<br /><br />
+
+
+	<% for i in 0..4 %>
+
+	<%= image_tag(@hand.fetch(i)[0] + "_".html_safe + @hand.fetch(i)[1] + ".png", :alt => @hand.fetch(i)[0] + "_".html_safe + @hand.fetch(i)[1]) %>
+
+	<% end %>
+</div>
