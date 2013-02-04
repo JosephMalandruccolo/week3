@@ -1,0 +1,15 @@
+<div id="container">
+	<h1>Dice Game</h1>
+	<h2>Welcome</h2>
+	<h3>Here are the rules</h3>
+	<ul>
+		<li>Roll the dice to start the game</li>
+		<li>If your first roll is a 7 or 11, you win.</li>
+		<li>If your first roll is a 2, 3 or 12, you lose.</li>
+		<li>Anything else becomes your point. Roll your point again before a 7 and you win.</li>
+	</ul>
+
+	<%= form_tag("/dice/roll", :method => "post") do %>
+		<%= submit_tag("Roll to start the game", :class => "btn") %>
+	<% end %>
+</div>

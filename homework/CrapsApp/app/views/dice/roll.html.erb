@@ -1,0 +1,9 @@
+<div id="container">
+	<h1>Dice Game</h1>
+	<h2><%= @result %></h2>
+	<img src=<%= '"'.html_safe + @dice_1_url + '"'.html_safe %> />
+	<img src=<%= '"'.html_safe + @dice_2_url + '"'.html_safe %> />
+	<%= form_tag(@link, :method => "post") do %>
+		<%= submit_tag(@button_text, :class => "btn") %>
+	<% end %>
+</div>
